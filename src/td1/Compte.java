@@ -86,13 +86,11 @@ public class Compte {
 
     }
 
-    // Permet de faire un virement entre deux comptes (methode)
+    // Permet de faire un virement entre deux comptes (methode) /// faire que celui ci pour exception 
 
-    public void virement(double montant, Compte destinataire)  {
+    public void virement(double montant, Compte destinataire)throws NegatifException, DecouvertException, DebitMaxException { 
          this.debiter(montant);
             destinataire.crediter(montant);
-
-
 
  }
 

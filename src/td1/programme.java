@@ -14,7 +14,11 @@ public class programme {
 
         try{c1.crediter(-100);}catch (NegatifException e){System.out.println("montant negatif");}
 /// Mettre un get message ici
-        try{c1.debiter(2000);}catch (NegatifException e){System.out.println("montant negatif");}catch(DecouvertException e){System.out.println("t en decouvert");}catch(DebitMaxException e){System.out.println("t > au debit max");}
+        try{
+            c1.debiter(-2000);
+        } catch (NegatifException e){
+            System.out.println(e.getMessage());
+        }catch(DecouvertException e){System.out.println("t en decouvert");}catch(DebitMaxException e){System.out.println("t > au debit max");}
 ///  Mettre un get message ici
 
         // Retirer 300 € du compte c1
